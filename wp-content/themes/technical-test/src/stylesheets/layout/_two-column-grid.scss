@@ -1,0 +1,76 @@
+.two-column-grid {
+    padding: 3rem 0;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__col:nth-child(1) {
+        width: 100%;
+        margin-right: 0;
+        @include iphone {
+            width: 55%;
+            margin-right: 7%;
+        }
+    }
+    &__col:nth-child(2) {
+        width: 100%;
+        display: none;
+        @include iphone {
+            width: 38%;
+            display: block;
+        }
+    }
+    &__heading {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        font-weight: $bold;
+    }
+    &__heading-break {
+        display: inline;
+        @include laptop {
+            display: block;
+        }
+    }
+    &__subheading {
+        color: $primary-color;
+        font-size: 0.95rem;
+        margin-bottom: 1.1rem;
+    }
+    &__content {
+        color: $middarkgrey;
+    }
+    &__btn {
+        color: $black;
+        z-index: 4;
+        font-size: 1rem;
+        padding: 0.7rem 0rem 0.7rem 1.7rem;
+        font-weight: $medium;
+        width: 195px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    &__icon {
+        margin-left: 1.75rem;
+    }
+    &__img {
+        width: 100%;
+        margin-top: 0;
+        @include iphone {
+            margin-top: 4rem;
+        }
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+    &__img-mobile {
+        display: block;
+        width: 100%;
+        margin: 1rem 0 1.7rem 0;
+        @include iphone {
+            display: none;
+            margin: 1rem 0;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.banner {
+    width: 100%;
+    position: relative;
+    &__img {
+        width: 100%;
+        height: 87vh;
+        @include iphone {
+            height: 640px;
+        }
+        object-fit: cover;
+    }
+    &__logo {
+        margin-top: -50px;
+        @include iphone {
+            margin-top: -10px;
+        }
+        width: 146px;
+        height: auto;
+        //object-fit: cover;
+    }
+    &__wrapper {
+        max-width: 1350px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3.3rem 1rem 3.3rem 1rem;
+        @include iphone {
+            align-items: unset;
+            padding: 3.3rem 3.3rem 3.3rem 2rem;
+        }
+        @include tablet {
+            padding: 3.3rem 3.3rem 3.3rem 4.5rem;
+        }
+        @include desktop-small {
+            padding: 3.3rem 3.3rem 3.3rem 4.5rem;
+        }
+        @include desktop {
+            padding: 3.3rem 3.3rem 3.3rem 0;
+        }
+    }
+    &__heading {
+        color: $white;
+        z-index: 10;
+        padding: 0;
+        font-size: 2.3rem;
+        line-height: 2.9rem;
+        font-weight: $bold;
+        margin-bottom: 1.8rem;
+        margin-top: 1.7rem;
+        padding: 0;
+        text-align: center;
+        @include iphone {
+            text-align: left;
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+        @include tablet {
+            text-align: left;
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
+    }
+    &__heading-break {
+        display: inline;
+        @include laptop {
+            display: block;
+        }
+    }
+    &__content {
+        color: white;
+        z-index: 10;
+        padding: 0;
+        font-size: 0.95rem;
+        line-height: 1.65rem;
+        font-weight: $light;
+        margin-bottom: 2rem;
+    }
+    &__btn {
+        z-index: 4;
+        font-size: 1rem;
+        padding: 0.7rem 0.5rem 0.7rem 1.5rem;
+        font-weight: 300;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icon {
+        margin-left: 1.15rem;
+    }
+}

@@ -1,0 +1,44 @@
+// // Header.
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 0.8rem 0;
+  @include laptop {
+    padding: 0;
+    height: auto;
+  }
+  background: $white;
+  &__container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include tablet {
+      width: 100%;
+    }
+    @include laptop {
+      width: 75%;
+    }
+  }
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include laptop {
+      flex-wrap: nowrap;
+    }
+  }
+  & .custom-logo-link {
+    margin: 0 0 0 1.5rem;
+    @include laptop {
+      margin: 0;
+    }
+  }
+  & .custom-logo {
+    width: 150px;
+    height: auto;
+  }
+}

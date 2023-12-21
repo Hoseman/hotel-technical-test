@@ -1,0 +1,56 @@
+// Toggle.
+.toggle {
+  $self: &;
+  width: 36px;
+  height: 24px;
+  background: transparent;
+  position: relative;
+  padding: initial;
+  cursor: pointer;
+  border: unset;
+  transition: all 0.35s ease-in-out;
+  z-index: 4;
+  outline: none;
+  color: $white;
+  margin-right: 1.6rem;
+  @include laptop {
+    margin-right: 0;
+    display: none;
+  }
+
+  &:before,
+  &:after,
+  &__line {
+    @extend %pseudo;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: $black;
+    transition: all 0.25s ease-in-out;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    top: 100%;
+    width: 100%;
+  }
+  &__line {
+    top: 54.5%;
+    //top: calc(50% + 2px);
+    transform: translateY(-54.5%);
+  }
+  &--open {
+    &:before {
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    #{$self}__line {
+      opacity: 0;
+    }
+    &:after {
+      transform: rotate(45deg) translate(-10px, -11px);
+      width: 100%;
+    }
+  }
+}

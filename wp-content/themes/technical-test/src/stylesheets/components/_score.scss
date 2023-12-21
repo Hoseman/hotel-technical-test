@@ -1,0 +1,22 @@
+.value {
+    background: white;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    border-radius: 50%;
+    left: 7px;
+    top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.circle {
+    width: 72px; 
+    height: 72px;
+    background: conic-gradient(#fc115c var(--border), #dedede 0);
+    border: 0px solid #fc115c;
+    border-radius: 50%;
+}

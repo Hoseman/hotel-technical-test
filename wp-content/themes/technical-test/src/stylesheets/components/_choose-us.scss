@@ -1,0 +1,76 @@
+.choose-us {
+    &__container {
+        flex-direction: row-reverse;
+    }
+    &__title {
+        text-align: center;
+        font-size: 1.98rem;
+        line-height: 2.4rem;
+        font-weight: $bold;
+        margin-bottom: 4.3rem;
+        margin-top: 0.5rem;
+        padding: 0 2rem;
+    }
+    &__heading {
+        font-size: 1.49rem;
+        line-height: 2.25rem;
+        font-weight: $bold;
+        padding-top: 0;
+    }
+    &__subheading {
+        color: $primary-color;
+        text-align: center;
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        padding: 0;
+    }
+    &__number {
+        background: $primary-color;
+        font-weight: $semi-bold;
+        color: #fff;
+        font-size: 1.45rem;
+        line-height: 2.2rem;
+        padding: 0 1.85rem;
+        border-radius: 2rem;
+        text-align: center;
+        display: inline-block;
+        margin-bottom: 0.9rem;
+    }
+    &__content {
+        color: $midgrey;
+        margin-bottom: 1.1rem;
+    }
+    & .two-column-grid__col:first-child {
+        width: 100%;
+        margin-left: 0%;
+        @include tablet {
+            width: 53.5%;
+            margin-left: 8.5%;
+        }
+        margin-right: 0;
+    }
+    & .two-column-grid__col:nth-child(2) {
+        width: 100%;
+        display: none;
+        @include iphone {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include tablet {
+            width: 38%;
+            display: block;
+        }
+    }
+
+    &__img-mobile {
+        display: block;
+        width: 100%;
+        margin: -2rem 0 2.5rem 0;
+        @include iphone {
+            display: none;
+            margin: 1rem 0;
+        }
+    }
+}

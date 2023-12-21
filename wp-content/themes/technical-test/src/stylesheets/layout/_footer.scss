@@ -1,0 +1,157 @@
+.footer {
+  background: $lightblack;
+  padding: 1.3rem 0;
+  @include iphone {
+    padding: 1.6rem 0;
+  }
+  text-align: center;
+  &__layout {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include iphone {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    a {
+      color: $white;
+    }
+  }
+  &__col:nth-child(1) {
+    width: 100%;
+    margin-bottom: 1.75rem;
+    @include laptop {
+      width: 31%;
+      margin-bottom: 0;
+    }
+  }
+  &__col {
+    width: 100%;
+    @include iphone {
+      width: 23%;
+    }
+  }
+  &__menu {
+    display: block;
+    margin-top: 0;
+    @include iphone {
+      margin-top: 1.3rem;
+    }
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+  &__menu li a {
+    font-weight: 300;
+    padding: 0.3rem 1rem 0.3rem 0;
+    @include laptop {
+      padding: 0.3rem 1rem;
+    }
+  }
+  &__logo {
+    width: 102px;
+    height: auto;
+    margin-bottom: 0.45rem;
+  }
+  &__logo-wrapper {
+    width: 165px;
+    @include tablet {
+      width: 210px;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0.99rem 0;
+  }
+  &__bga-logo {
+    width:100%;
+    @include tablet {
+      width: auto;
+    }
+  }
+  &__18-logo {
+    width: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    @include tablet {
+      width: auto;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__signoff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 1.5rem 0 0 0;
+    @include iphone {
+      padding: 1.5rem 0;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+    width: 100%;
+    border-top: 1px solid $palegreyalt;
+    margin-top: 1.4rem;
+    font-size: 0.88rem;
+    width: 77%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__signoff-text {
+    color: $midgrey;
+  }
+}
+
+.navigation {
+  flex-basis: 100%;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  & .menu {
+    display: block;
+    @include iphone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__description {
+      display: block;
+    }
+    & li {
+      padding: 0.8rem 0;
+      margin: 0;
+      @include laptop {
+        margin: 0 1.6rem;
+      }
+      transition: background 0.15s ease-in;
+      &:first-of-type {
+        margin-left: unset;
+      }
+      &:last-of-type {
+        margin-right: unset;
+      }
+      & a {
+        font-weight: $extra-light;
+        color: $white;
+        font-size: 0.99rem;
+        padding: 0 0.8rem;
+        @include tablet {
+          padding: 0 1.5rem;
+        }
+        @include laptop {
+          padding: 0;
+        }
+      }
+      & a:hover {
+        color: $primary-color
+      }
+    }
+  }
+}

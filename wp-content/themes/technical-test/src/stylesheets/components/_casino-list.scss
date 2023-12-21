@@ -1,0 +1,332 @@
+.casino-list {
+    background: $palegrey;
+    padding: 2rem 2rem;
+    @include tablet {
+        padding: 3rem;
+    }
+    &__heading {
+        font-size: 1.97rem;
+        line-height: 2.55rem;
+        font-weight: $bold;
+        text-align: center;
+        padding: 0 0 0.4rem 0;
+    }
+    &__date {
+        font-style: italic;
+        color: $black;
+        font-size: 0.8rem;
+        font-weight: $medium;
+        text-align: center;
+    }
+    &__date-icon {
+        width: 10px;
+        height: auto;
+    }
+    &__tab {
+        background: $tertiary-color;
+        font-size: 0.85rem;
+        color: $white;
+        border-top-left-radius: 1.3rem;
+        border-top-right-radius: 1.3rem;
+        text-align: center;
+        width: 225px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 2.1rem;
+        padding: 0;
+        margin-top: 2.45rem;
+        @include tablet {
+            margin-top: 1.7rem;
+        }
+    }
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        background: $white;
+        padding: 1rem 1rem 0.3rem 1rem;
+        border-radius: 0.6rem;
+        @include tablet {
+            padding: 0;
+            border-radius: 0.35rem;
+        }
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+    &__number {
+        width: 24px;
+        text-align: center;
+        background: $primary-color;
+        color: $white;
+        font-size: 1.45rem;
+        font-weight: $medium;
+        padding: 3.6rem 0rem;
+        border-radius: 0.3rem;
+        display: none;
+        @include tablet {
+            font-size: 1.15rem;
+            display: block;
+            width: 24px;
+        }
+        @include laptop {
+            font-size: 1.75rem;
+            width: 31px;
+        }
+    }
+    &__logo-wrapper {
+        width: calc(100% - 104px);
+        @include tablet {
+            width: auto;
+        }
+    }
+    &__logo {
+        height: 100%;
+        width: 190px;
+        padding: 0 0.7rem 0 0.7rem;
+        margin-bottom: 1.6rem;
+        @include tablet {
+            width: 110px;
+            padding: 0 0.5rem 0 0.5rem;
+            margin-bottom: 0;
+        }
+        @include laptop {
+            width: 215px;
+            padding: 0 0.9rem 0 0.9rem;
+        }
+        @include desktop-small {
+            padding: 0 1.3rem 0 1.5rem;
+        }
+    }
+    &__address-wrapper {
+        width: 100%;
+        @include tablet {
+            width: auto;
+        }
+    }
+    &__address {
+        text-align: center;
+        padding: 0.85rem 0.2rem;
+        max-width: 100%;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.91rem;
+        border-top: 1px solid $midpalegrey;
+        border-bottom: 1px solid $midpalegrey;
+        @include tablet {
+            font-size: 0.85rem;
+            padding: 0 0.7rem;
+            max-width: 144px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+        }
+        @include laptop {
+            padding: 0 0.7rem;
+            max-width: 215px;
+        }
+        @include desktop-small {
+            padding: 0 1.5rem;
+            max-width: 250px;
+        }
+        line-height: 1.3rem;
+    }
+    &__address-top {
+        font-size: 1rem;
+        color: $midgrey;
+        display: block;
+        margin-bottom: 0.5rem;
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+    &__rating {
+        padding: 1.5rem 0rem 1.5rem 0rem;
+        position: absolute;
+        top: 4.5rem;
+        right: 1rem;
+        display: none;
+        @include tablet {
+            position: relative;
+            top: unset;
+            right: unset;
+            padding: 1.5rem 0.4rem 1.5rem 0.4rem;
+            width: 135px;
+            display: block;
+        }
+        @include laptop {
+            padding: 1.5rem 0.4rem 1.5rem 0.4rem;
+            width: 157px;
+        }
+        @include desktop-small {
+            padding: 1.5rem 1.99rem 1.5rem 1.1rem;
+            width: 157px;
+        }
+        text-align: center;
+    }
+    &__rating-mobile {
+        padding: 1.5rem 0rem 1.5rem 0rem;
+        position: absolute;
+        top: 4.6rem;
+        right: 1rem;
+        display: block;
+        width: 104px;
+        @include tablet {
+            position: relative;
+            top: unset;
+            right: unset;
+            padding: 1.5rem 0.4rem 1.5rem 0.4rem;
+            width: 135px;
+            display: none;
+        }
+        text-align: center;
+    }
+    &__rating-text {
+        color: $midgrey;
+        padding: 0.3rem 0 0 0;
+        display: none;
+        @include tablet {
+            display: block;
+        }
+    }
+    &__star {
+        color: $gold;
+        font-size: 0.9rem;
+        padding: 0 0.125rem;
+        @include tablet {
+            padding: 0 0.15rem;
+        }
+    }
+    &__score {
+        position: relative;
+        font-weight: $bold;
+        border-radius: 3rem;
+        text-align: center;
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: none;
+        @include tablet {
+            display: block;
+            width: 60px;
+            height: 60px;
+            font-size: 1.2rem;
+            position: relative;
+            top: unset;
+            right: unset;
+        }
+        @include laptop {
+            top: unset;
+            right: unset;
+            font-size: 1.6rem;
+            width: 72px;
+            height: 72px;
+        }
+    }
+    &__score-mobile {
+        font-weight: $bold;
+        border-radius: 3rem;
+        text-align: center;
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: 1.2rem;
+        right: 1rem;
+        display: block;
+        @include tablet {
+            display: none;
+            width: 60px;
+            height: 60px;
+            font-size: 1.2rem;
+            position: relative;
+            top: unset;
+            right: unset;
+        }
+    }
+    &__wrapper-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 104px;
+        height: 115px;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__list {
+        text-align: center;
+        padding: 1rem 0.2rem 1rem 0.2rem;
+        width: 100%;
+        @include tablet {
+            padding: 1rem 0.8rem 1rem 0.8rem;
+            width: auto;
+        }
+        @include laptop {
+            padding: 1rem 0.8rem 1rem 0.8rem;
+        }
+        @include desktop-small {
+            padding: 1rem 1.6rem 1rem 2rem;
+        }
+    }
+    &__btn {
+        background: $secondary-color;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        padding: 0.3rem 1.0rem 0.3rem 2.6rem;
+        min-width: 135px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        @include tablet {
+            font-size: 0.75rem;
+            padding: 0.18rem 0rem 0.18rem 1.5rem;
+            min-width: 135px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include laptop {
+            font-size: 0.9rem;
+            padding: 0.18rem 1rem 0.18rem 2.4rem;
+            min-width: 155px;
+        }
+        @include desktop-small {
+            font-size: 1.08rem;
+            padding: 0.18rem 1.1rem 0.18rem 2.5rem;
+        }
+        margin-bottom: 0.55rem;
+    }
+    &__icon {
+        width: 40px;
+        margin-left: 0rem;
+        padding: 0.5rem 0.5rem;
+        @include tablet {
+            width: 55px;
+            padding: 0.5rem 1rem;
+        }
+    }
+    &__review {
+        font-weight: $light;
+        text-decoration: underline;
+        font-size: 1.1rem;
+        margin-top: 0.75rem;
+        @include tablet {
+            font-size: 0.88rem;
+            margin-top: 0;
+        }
+    }
+}

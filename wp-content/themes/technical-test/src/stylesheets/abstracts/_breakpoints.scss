@@ -1,0 +1,41 @@
+/**
+ * Breakpoints.
+ */
+
+$breakpoints: (
+  iphone: 560px,
+  tablet: 768px,
+  laptop: 1024px,
+  desktop-small: 1200px,
+  desktop: 1480px
+);
+
+@mixin iphone {
+  @media (min-width: map-get($breakpoints, iphone)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media (min-width: map-get($breakpoints, desktop-small)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
