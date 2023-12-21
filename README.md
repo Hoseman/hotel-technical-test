@@ -19,6 +19,8 @@ A technical test for building a home page in Wordpress
 
 URL: https://technicaltest.achcreative.co.uk
 
-User: see email
+User: See email
 
-Pass: see email
+Pass: See email
+
+Database: See email for sql file
