@@ -1,6 +1,6 @@
 # Application
-node_modules
-node_modules/*
+wp-content/themes/technical-test/node_modules
+wp-content/themes/technical-test/node_modules/*
 
 # WordPress
 wp-config.php
