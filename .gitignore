@@ -1,0 +1,9 @@
+# Application
+node_modules
+node_modules/*
+
+# WordPress
+wp-config.php
+
+# Other
+.DS_Store
