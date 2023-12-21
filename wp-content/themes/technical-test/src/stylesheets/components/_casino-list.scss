@@ -1,6 +1,9 @@
 .casino-list {
     background: $palegrey;
-    padding: 2rem 2rem;
+    padding: 2rem 1.6rem;
+    @include iphone {
+        padding: 2rem 2rem;
+    }
     @include tablet {
         padding: 3rem;
     }
@@ -88,7 +91,10 @@
         height: 100%;
         width: 190px;
         padding: 0 0.7rem 0 0.7rem;
-        margin-bottom: 1.6rem;
+        margin-bottom: 2rem;
+        @include iphone {
+            margin-bottom: 1.6rem;
+        }
         @include tablet {
             width: 110px;
             padding: 0 0.5rem 0 0.5rem;
@@ -121,7 +127,7 @@
         @include tablet {
             font-size: 0.85rem;
             padding: 0 0.7rem;
-            max-width: 144px;
+            max-width: 145px;
             width: auto;
             margin-left: auto;
             margin-right: auto;
@@ -130,7 +136,7 @@
         }
         @include laptop {
             padding: 0 0.7rem;
-            max-width: 215px;
+            max-width: 205px;
         }
         @include desktop-small {
             padding: 0 1.5rem;
@@ -174,14 +180,14 @@
     &__rating-mobile {
         padding: 1.5rem 0rem 1.5rem 0rem;
         position: absolute;
-        top: 4.6rem;
-        right: 1rem;
+        top: 4rem;
+        left: 0;
         display: block;
         width: 104px;
         @include tablet {
             position: relative;
             top: unset;
-            right: unset;
+            left: unset;
             padding: 1.5rem 0.4rem 1.5rem 0.4rem;
             width: 135px;
             display: none;
@@ -207,7 +213,7 @@
     &__score {
         position: relative;
         font-weight: $bold;
-        border-radius: 3rem;
+        border-radius: 0;
         text-align: center;
         margin: 0 1rem;
         font-size: 1.6rem;
@@ -219,32 +225,34 @@
         display: none;
         @include tablet {
             display: block;
-            width: 60px;
-            height: 60px;
+            width: 75px;
+            height: auto;
             font-size: 1.2rem;
             position: relative;
             top: unset;
             right: unset;
+            margin: 0 0.5rem;
         }
         @include laptop {
             top: unset;
             right: unset;
             font-size: 1.6rem;
-            width: 72px;
-            height: 72px;
+            width: 82px;
+            height: auto;
+            margin: 0 1rem;
         }
     }
     &__score-mobile {
         font-weight: $bold;
-        border-radius: 3rem;
+        border-radius: 0;
         text-align: center;
-        margin: 0 1rem;
+        margin: 0;
         font-size: 1.6rem;
-        width: 72px;
-        height: 72px;
+        width: 100%;
+        height: auto;
         position: absolute;
-        top: 1.2rem;
-        right: 1rem;
+        top: 0;
+        right: 0;
         display: block;
         @include tablet {
             display: none;
@@ -260,10 +268,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         width: 104px;
         height: 115px;
+        margin-top: -1rem;
+        @include iphone {
+            margin-top: -1rem;
+        }
         @include tablet {
             display: none;
+            margin-top: 0;
         }
     }
     &__list {

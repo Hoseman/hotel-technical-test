@@ -34,6 +34,14 @@
             $score = get_field('casino_hotels_score'); // grab the ACF score value
             $link = get_field('casino_hotels_external_link'); // grab the ACF external link value
             ?>
+            <?php 
+            // Grab the star rating and calculate the score
+            $score = $star_rating / 5 * 100;
+            ?>
+            <?php
+            // Calculate the score as a percentage value
+            $percentage = $score / 10 * 100 / 10;
+            ?>
 
             <div class="casino-list__card">
                 <div class="casino-list__number"><?php echo $count; //display the count number for each card ?></div> 
@@ -51,8 +59,7 @@
                 </div>
                 <div class="casino-list__wrapper-mobile">
                     <div class="casino-list__score-mobile">
-                        <div class="value"><?php echo $score; ?></div>
-                        <div class="circle" style="--border: <?php echo $score; ?>0%;"></div>
+                        <div class="pie animate" style="--p:<?php if($percentage < 100){ echo $percentage - 2; } else { echo $percentage; } ?>;--c:#fc115c"> <?php echo $percentage / 10; ?></div>
                     </div>
                     <!-- display alternative ratings content for mobile only -->
                     <div class="casino-list__rating-mobile">
@@ -114,8 +121,7 @@
                 <!-- end display the ratings content for desktop -->
 
                 <div class="casino-list__score">
-                    <div class="value"><?php echo $score; ?></div>
-                    <div class="circle" style="--border: <?php echo $score; ?>0%;"></div>
+                    <div class="pie animate" style="--p:<?php if($percentage < 100){ echo $percentage - 2; } else { echo $percentage; } ?>;--c:#fc115c"> <?php echo $percentage / 10; ?></div>
                 </div>
                 <div class="casino-list__list">
                     <a target="_blank" href="<?php echo $link; ?>" class="button casino-list__btn">Visit Hotel <img class="casino-list__icon" alt="arrow" src="/wp-content/uploads/2023/12/arrow-right.svg"></a>
