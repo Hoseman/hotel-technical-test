@@ -1,7 +1,7 @@
 .single-header {
     display: flex;
     flex-direction: column;
-    @include laptop {
+    @include iphone {
         flex-direction: row;
     }
     align-items: center;
@@ -14,7 +14,6 @@
         font-size: 2rem;
         padding: 1.5rem 0;
         margin-top: -2rem;
-        text-align: center;
         line-height: 2.2rem;
         @include laptop {
             padding: 2.5rem 0;
@@ -25,22 +24,31 @@
         font-size: 0.9rem;
         line-height: 1.3rem;
         text-align: center;
-        margin-bottom: 1rem;
-        max-width: 230px;
-        @include laptop {
+        margin-bottom: 0;
+        max-width: 100%;
+        padding: 0 0 1.2rem 0;
+        @include iphone {
             text-align: right;
-            margin-bottom: 0;
+            max-width: 160px;
+            padding: 0;
+        }
+        @include laptop {
+            max-width: 230px;
         }
     }
     &__logo-container {
-        width: 140px;
+        width: 160px;
         @include laptop {
             width: 230px;
         }
     }
     &__logo {
-        width: 100%;
-        margin: 1.7rem 0;
+        width: 110px;
+        margin: 0.6rem 0 0.6rem 0;
+        @include iphone {
+            width: 140%;
+            margin: 1.7rem 0;
+        }
         @include laptop {
             width: 140px;
             margin: 0.5rem 0;
@@ -48,6 +56,10 @@
     }
 }
 .single {
+    text-align: center;
+    @include tablet {
+        text-align: left;
+    }
     &__btn {
         background: $secondary-color;
         display: flex;

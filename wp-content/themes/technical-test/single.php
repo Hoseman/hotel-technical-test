@@ -34,7 +34,7 @@ get_header();
 				
 	?>
 	</div>
-	<h1 class="single-header__title"><?php echo $page_title; ?></h1>	
+
 	<p class="single-header__address">Address:<br><?php echo $address; ?></p>
 	
 
@@ -54,7 +54,7 @@ get_header();
 
 		?>	
 
-
+			<h1 class="single-header__title"><?php echo $page_title; ?></h1>
 			<?php the_content(); ?>
 
 			<a href="/" class="button single__btn"><img class="single__icon" alt="arrow" src="/wp-content/uploads/2023/12/arrow-right.svg"> Return</a>
